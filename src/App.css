@@ -1,0 +1,106 @@
+.buttonclass {
+  background-color: lightgreen;
+  width: 100px;
+  height: 100px;
+}
+
+.buttonclass:hover {
+  border-color: red;
+  border-style: ridge;
+  border-width: 3px;
+}
+
+.button1 {
+  font-size: 50px;
+  color: rebeccapurple;
+  background-color: hotpink;
+  border-radius: 50%;
+}
+
+.loginSignupHeader {
+  font-weight: 600;
+  font-size: 30px;
+  color: #ef7917;
+}
+.loginForm {
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: 50px auto;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.field {
+  width: 100%;
+}
+.field input {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  padding: 5px;
+  font-size: 15px;
+}
+.field input:focus {
+  outline: none;
+}
+.field button {
+  width: 100%;
+  margin-top: 20px;
+  background: #ef7917;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 20px;
+  padding: 9px;
+  border: none;
+  outline: none;
+}
+.field button:hover {
+  cursor: pointer;
+}
+.game{
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vmin;
+  position: absolute;
+  top: 30%;
+  left: 37%;
+  align-items: center;
+}
+.box{
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  font-size: 50px;
+  background-color: antiquewhite;
+  box-shadow: 5px 5px 5px 5px ;
+  
+  
+}
+
+.nam{
+  text-align: center;
+}
+/* div{
+  border: ridge black;
+} */
+.box[value="X"] {
+  color: red;
+  box-shadow: 5px 5px 5px 5px ;
+}
+.box[value="0"] {
+  color: blue;
+  box-shadow: 5px 5px 5px 5px ;
+}
+.hg {
+  background-color: rgb(59, 237, 59); 
+}
