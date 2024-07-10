@@ -7,7 +7,6 @@ function Home() {
   const [data1,setData1]=useState('');
   useEffect(() => {
     fetch(`http://mrghazipur.in/api/findwating`)
-      // fetch('http://localhost:8000')
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

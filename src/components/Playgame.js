@@ -6,7 +6,7 @@ function Playgame() {
   const [data, setData] = useState("");
   const [player1, setPlayer1] = useState("");
   const [player2, setPlayer2] = useState("");
-  const [isTrue, setIsTrue] = useState(false);
+  const [isTrue, setIsTrue] = useState('X');
 
   const intervalRef = useRef();
   let no_of_move;
@@ -80,13 +80,13 @@ function Playgame() {
         });
   }
   const f1 = (a, b) => {
-    setIsTrue((prev) => !prev);
     let t = document.getElementById(`t${a}${b}`);
     if (t.value == "X" || t.value == "O") {
       alert("Cannot place here");
       return;
     }
-    t.value = isTrue ? "X" : "O";
+    // t.value = isTrue ? "X" : "O";
+    t.value=isTrue;
     //t.disabled = true; // Disable button after it's clicked
     win();
     fetch(
@@ -99,7 +99,12 @@ function Playgame() {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        console.log(data,data.player==='X');
+        if(data.player==='X'){
+          setIsTrue('O')
+        }else{
+          setIsTrue('X');
+        }
       })
       .catch((error) => {
         console.error(
